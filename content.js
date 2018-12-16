@@ -1,10 +1,10 @@
 (() => {
-    const favicon = $('link[rel="shortcut icon"]');
-    const color = $('.navbar-main').css('background-color');
 
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = (e) => {
+        const color = window.getComputedStyle(document.querySelector('.navbar-main')).backgroundColor;
+
         const canvas = document.createElement("canvas");
         canvas.height = 32;
         canvas.width = 32;
@@ -14,7 +14,8 @@
         c.fillRect(0, 0, 32, 32);
         c.drawImage(img, 0, 0, 32, 32);
 
-        favicon.attr("href", canvas.toDataURL('image/png'));
+        const favicon = document.querySelector('link[rel="shortcut icon"]');
+        favicon.setAttribute("href", canvas.toDataURL('image/png'));
     };
-    img.src = favicon.attr('href');
+    img.src = chrome.runtime.getURL("icons/favicon.png");
 })();
