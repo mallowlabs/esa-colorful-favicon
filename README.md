@@ -16,10 +16,6 @@
 
 ![after](images/esa_after.png)
 
-## インストール
-
-[https://chrome.google.com/webstore/detail/esa-colorful-favicon/klbldcnfceelflhmdbbcgeojenigocff](https://chrome.google.com/webstore/detail/esa-colorful-favicon/klbldcnfceelflhmdbbcgeojenigocff)
-
 ## ライセンス
 
 MIT.
